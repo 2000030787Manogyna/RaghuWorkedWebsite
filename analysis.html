@@ -38,31 +38,31 @@
                     </h6>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="showAnalysis('attendance')">Attendance Analysis</a>
+                            <a class="nav-link" href="#" onclick="showAnalysis('attendance', event)">Attendance Analysis</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="showAnalysis('teacherQuality')">Teacher Quality Analysis</a>
+                            <a class="nav-link" href="#" onclick="showAnalysis('teacherQuality', event)">Teacher Quality Analysis</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="showAnalysis('parentalInvolvement')">Parental Involvement Analysis</a>
+                            <a class="nav-link" href="#" onclick="showAnalysis('parentalInvolvement', event)">Parental Involvement Analysis</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="showAnalysis('schoolType')">School Type Analysis</a>
+                            <a class="nav-link" href="#" onclick="showAnalysis('schoolType', event)">School Type Analysis</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="showAnalysis('hoursStudied')">Hours Studied Analysis</a>
+                            <a class="nav-link" href="#" onclick="showAnalysis('hoursStudied', event)">Hours Studied Analysis</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="showAnalysis('sleepHours')">Sleep Hours Analysis</a>
+                            <a class="nav-link" href="#" onclick="showAnalysis('sleepHours', event)">Sleep Hours Analysis</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="showAnalysis('extracurricular')">Extracurricular Activities Analysis</a>
+                            <a class="nav-link" href="#" onclick="showAnalysis('extracurricular', event)">Extracurricular Activities Analysis</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="showAnalysis('stackedComparison')">School Type Comparison (Stacked)</a>
+                            <a class="nav-link" href="#" onclick="showAnalysis('stackedComparison', event)">School Type Comparison (Stacked)</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="showAnalysis('sideBySideComparison')">Parental vs Teacher Impact</a>
+                            <a class="nav-link" href="#" onclick="showAnalysis('sideBySideComparison', event)">Parental vs Teacher Impact</a>
                         </li>
                     </ul>
                 </div>
@@ -86,16 +86,6 @@
                     </div>
                 </div>
 
-                <!-- Statistics Container -->
-                <div class="card mb-4">
-                    <div class="card-header">
-                        <h5 class="card-title">Statistics</h5>
-                    </div>
-                    <div class="card-body">
-                        <div id="statsContainer"></div>
-                    </div>
-                </div>
-
                 <!-- Tableau Dashboard -->
                 <div class="card mb-4">
                     <div class="card-header">
@@ -114,17 +104,77 @@
                 <!-- PDF Data Section -->
                 <div class="card mb-4">
                     <div class="card-header">
-                        <h5 class="card-title">Student Performance Data</h5>
+                        <h5 class="card-title">Analysis Reports</h5>
                     </div>
                     <div class="card-body">
                         <div class="pdf-container">
-                            <p>View the student performance data PDF:</p>
-                            <a href="https://github.com/2000030787Manogyna/Scientific-data-projectt/blob/main/Sheet%201.pdf" 
-                               target="_blank" 
-                               class="pdf-link">
-                                Open Student Performance Data PDF
-                            </a>
-                            <p class="pdf-note">Note: The PDF will open in a new tab. If you can't view it directly, you may need to download it first.</p>
+                            <div class="list-group">
+                                <a href="https://github.com/2000030787Manogyna/Scientific-data-projectt/blob/main/Sheet%201.pdf" 
+                                   target="_blank" 
+                                   class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">Attendance Analysis Report</h6>
+                                        <small>PDF</small>
+                                    </div>
+                                    <small class="text-muted">Detailed analysis of student attendance patterns and impact</small>
+                                </a>
+                                <a href="https://github.com/2000030787Manogyna/Scientific-data-projectt/blob/main/Sheet%204.pdf" 
+                                   target="_blank" 
+                                   class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">Teacher Quality Analysis Report</h6>
+                                        <small>PDF</small>
+                                    </div>
+                                    <small class="text-muted">Impact of teacher quality on student performance</small>
+                                </a>
+                                <a href="https://github.com/2000030787Manogyna/Scientific-data-projectt/blob/main/destination.pdf" 
+                                   target="_blank" 
+                                   class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">Parental Involvement Report</h6>
+                                        <small>PDF</small>
+                                    </div>
+                                    <small class="text-muted">Analysis of parental involvement effects</small>
+                                </a>
+                                
+                                <a href="https://github.com/2000030787Manogyna/Scientific-data-projectt/blob/main/Sheet%202.pdf" 
+                                   target="_blank" 
+                                   class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">Study Hours Impact Report</h6>
+                                        <small>PDF</small>
+                                    </div>
+                                    <small class="text-muted">Analysis of study hours and performance correlation</small>
+                                </a>
+                                <a href="https://github.com/2000030787Manogyna/Scientific-data-projectt/blob/main/Sheet%205.pdf" 
+                                   target="_blank" 
+                                   class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">Sleep Hours Analysis Report</h6>
+                                        <small>PDF</small>
+                                    </div>
+                                    <small class="text-muted">Impact of sleep patterns on academic performance</small>
+                                </a>
+                                <a href="https://github.com/2000030787Manogyna/Scientific-data-projectt/blob/main/Sheet%205.pdf" 
+                                   target="_blank" 
+                                   class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">Extracurricular Activities Report</h6>
+                                        <small>PDF</small>
+                                    </div>
+                                    <small class="text-muted">Analysis of extracurricular activities impact</small>
+                                </a>
+                                <a href="https://github.com/2000030787Manogyna/Scientific-data-projectt/blob/main/Sheet%204.pdf" 
+                                   target="_blank" 
+                                   class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">Parent vs Teacher Impact</h6>
+                                        <small>PDF</small>
+                                    </div>
+                                    <small class="text-muted">Analysis of parent and teacher impact on student performance</small>
+                                </a>
+                            </div>
+                            <p class="pdf-note mt-3">Note: PDFs will open in a new tab. If you can't view them directly, you may need to download them first.</p>
                         </div>
                     </div>
                 </div>
@@ -138,7 +188,7 @@
         // Initialize the page with the first analysis option
         document.addEventListener('DOMContentLoaded', function() {
             // Show the first analysis option by default
-            showAnalysis('attendance');
+            showAnalysis('attendance', null);
         });
     </script>
 </body>
