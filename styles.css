@@ -1,0 +1,286 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: #495057;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.table-responsive {
+    padding: 15px;
+}
+
+#studentDataTable {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+#studentDataTable thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    color: #495057;
+    font-weight: 600;
+    text-align: center;
+    padding: 12px;
+    position: relative;
+}
+
+/* Filter dropdown styling */
+.filter-select {
+    width: 100%;
+    margin-top: 8px;
+    padding: 4px 8px;
+    font-size: 0.85rem;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    background-color: white;
+    color: #495057;
+}
+
+.filter-select:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+#studentDataTable tbody td {
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#studentDataTable tbody tr:hover {
+    background-color: rgba(73, 80, 87, 0.05);
+}
+
+/* DataTables Custom Styling */
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 15px;
+}
+
+.dataTables_wrapper .dataTables_length select {
+    min-width: 80px;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    min-width: 200px;
+    padding: 5px 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    margin-top: 15px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 5px 10px;
+    margin: 0 2px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    background-color: white;
+    color: #495057 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background-color: #495057;
+    color: white !important;
+    border-color: #495057;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.dataTables_wrapper .dataTables_info {
+    margin-top: 15px;
+    color: #6c757d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dataTables_wrapper .dataTables_filter input {
+        min-width: 150px;
+    }
+    
+    .card-header {
+        padding: 10px;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .filter-select {
+        font-size: 0.75rem;
+        padding: 2px 4px;
+    }
+}
+
+.welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 2rem;
+}
+
+.welcome-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.welcome-section .lead {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #34495e;
+}
+
+.pulse-button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.pulse-button:hover {
+    transform: scale(1.05);
+    background-color: #2980b9;
+    color: white;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(52, 152, 219, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+    }
+}
+
+.tableau-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tableau-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* PDF Container Styles */
+.pdf-container {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-link {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin: 15px 0;
+    transition: background-color 0.3s;
+}
+
+.pdf-link:hover {
+    background-color: #45a049;
+    text-decoration: none;
+    color: white;
+}
+
+.pdf-note {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 56px; /* Height of navbar */
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    overflow-y: auto;
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    margin: 0.2rem 0;
+}
+
+.sidebar .nav-link:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+    color: #007bff;
+}
+
+.sidebar .nav-link.active {
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.sidebar-heading {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+/* Main content adjustment for sidebar */
+@media (min-width: 768px) {
+    main {
+        margin-left: 16.666667%; /* col-md-2 width */
+    }
+} 
